@@ -236,8 +236,8 @@ static const Key keys[] = {
 	{ MODKEY,                               XK_Right,       focusmon,                 {.i = +1 } },
 	{ MODKEY|ShiftMask,                     XK_Right,       tagmon,                   {.i = +1 } },
 	{ MODKEY,                               XK_b,           togglebar,                {0} },
-	/*{ MODKEY,                               XK_h,           setmfact,                 {.f = -0.05} },*/
-	/*{ MODKEY,                               XK_l,           setmfact,                 {.f = +0.05} },*/
+	{ MODKEY,                               XK_h,           setmfact_ls,                 {.f = -0.05} },
+	{ MODKEY,                               XK_l,           setmfact_ls,                 {.f = +0.05} },
 	/*{ MODKEY,                               XK_z,           incrgaps,                 {.i = +3 } },*/
 	/*{ MODKEY,                               XK_x,           incrgaps,                 {.i = -3 } },*/
 	/*{ MODKEY,                               XK_a,           togglegaps,               {0} },*/
