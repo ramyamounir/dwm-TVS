@@ -142,11 +142,12 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 static const Layout layouts[] = {
     { "󰯌",          tile,                   'V' },
     { "󰨦",          NULL,                   'V' },
-    { "󰍉",          monocle,                'V' },
+    { "󰼀",          centeredmaster,         'V' },
     { "󱂩",          bstack,                 'H' },
     { "󰯋",          bstackhoriz,            'H' },
     { "",          centeredfloatingmaster, 'H' }
 };
+
 static const int default_layout = 5;
 
 /* key definitions */
