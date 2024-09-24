@@ -19,6 +19,8 @@ static const char *fonts[]            = {
     "Symbols Nerd Font Mono:size=12"
 };
 static const char dmenufont[]         = "SF Mono:size=10:style=SemiBold";
+
+
 /*
 fields                        background-turquoise        background-green
 
@@ -43,6 +45,8 @@ highlight search bg (shb)     "#003739"                   "#003739"
 highlight search font (shf)   "#E2D982"                   "#E2D982"
 */
 
+
+
 static const char bar_colour[]        = "#003A3E";
 static const char bar_font_colour[]   = "#00E6B0";
 static const char frame_colour[]      = "#E28743";
@@ -52,8 +56,8 @@ static const char bg_frame_colour[]   = "#003A3E";
 static const char titlebgcolor[]      = "#003A3E";
 static const char titlefgcolor[]      = "#009D7C";
 
-static const char dmenu_height[]      = "10";         /* number of lines */
-static const char dmenu_line_height[] = "25";         /* line height */
+static const char dmenu_height[]      = "10";         // number of lines
+static const char dmenu_line_height[] = "25";         // line height
 
 static const char dmenu_background[]    = "#003A3E";
 static const char dmenu_font[]          = "#25BBAA";
@@ -64,12 +68,43 @@ static const char dmenu_search_font[]   = "#003A3E";
 static const char dmenu_highlight_search[]       = "#003739";
 static const char dmenu_highlight_search_font[]  = "#E2D982";
 
+
 static const char *colors[][3]        = {
-	/*               fg         bg         border   */
+	//               fg         bg         border  
     [SchemeNorm]  = { bar_font_colour, bar_colour, bg_frame_colour },
  	[SchemeSel]   = { frame_font_colour, frame_colour, frame_border_colour  },
  	[SchemeTitle] = { titlefgcolor, titlebgcolor, titlebgcolor  },
 };
+
+
+
+
+/*
+// colors
+static char col_black[]       = "#1E2127";
+static char col_white[]       = "#abb2bf";
+static char col_blue[]       = "#61AFEF";
+static char col_red[]       = "#E45649";
+static char col_purple[]       = "#C678DD";
+static char col_green[]       = "#1DB954";
+static char col_yellow[]       = "#D19A66";
+
+static char normbgcolor[]           = "#222222";
+static char normbordercolor[]       = "#444444";
+static char normfgcolor[]           = "#bbbbbb";
+static char selfgcolor[]            = "#eeeeee";
+static char selbordercolor[]        = "#770000";
+static char selbgcolor[]            = "#005577";
+
+static char *colors[][3]      = {
+	//               fg         bg         border   
+	[SchemeNorm] = { col_white, col_black, col_black},
+	[SchemeSel]  = { col_white, col_black,  col_blue},
+};
+*/
+
+
+
 
 
 static const unsigned int OPAQUE = 0xD0U;

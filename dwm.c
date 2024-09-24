@@ -2501,7 +2501,7 @@ void
 updatestatus(void)
 {
 	if (!gettextprop(root, XA_WM_NAME, stext, sizeof(stext)))
-		strcpy(stext, "TVSOS");
+		strcpy(stext, "RMOS");
 	drawbar(selmon);
 }
 
