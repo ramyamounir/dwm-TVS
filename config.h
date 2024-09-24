@@ -47,24 +47,24 @@ highlight search font (shf)   "#E2D982"                   "#E2D982"
 
 
 
-static const char bar_colour[]        = "#003A3E";
-static const char bar_font_colour[]   = "#00E6B0";
+static const char bar_colour[]        = "#1E2127"; 
+static const char bar_font_colour[]   = "#abb2bf";
 static const char frame_colour[]      = "#E28743";
-static const char frame_font_colour[] = "#003A3E";
-static const char frame_border_colour[] = "#008080";
-static const char bg_frame_colour[]   = "#003A3E";
-static const char titlebgcolor[]      = "#003A3E";
-static const char titlefgcolor[]      = "#009D7C";
+static const char frame_font_colour[] = "#1E2127";
+static const char frame_border_colour[] = "#E28743";
+static const char bg_frame_colour[]   = "#1E2127";
+static const char titlebgcolor[]      = "#1E2127";
+static const char titlefgcolor[]      = "#abb2bf";
 
 static const char dmenu_height[]      = "10";         // number of lines
 static const char dmenu_line_height[] = "25";         // line height
 
-static const char dmenu_background[]    = "#003A3E";
+static const char dmenu_background[]    = "#1E2127";
 static const char dmenu_font[]          = "#25BBAA";
 static const char dmenu_highlight[]     = "#007169";
 static const char dmenu_highlight_font[]= "#00E7B1";
 static const char dmenu_search[]        = "#007169";
-static const char dmenu_search_font[]   = "#003A3E";
+static const char dmenu_search_font[]   = "#1E2127";
 static const char dmenu_highlight_search[]       = "#003739";
 static const char dmenu_highlight_search_font[]  = "#E2D982";
 
@@ -221,7 +221,7 @@ static const Key keys[] = {
 	/*{ MODKEY,                               XK_z,           incrgaps,                 {.i = +3 } },*/
 	/*{ MODKEY,                               XK_x,           incrgaps,                 {.i = -3 } },*/
 	/*{ MODKEY,                               XK_a,           togglegaps,               {0} },*/
-	/*{ MODKEY,                               XK_f,           togglefullscr,            {0} },*/
+	{ MODKEY,                               XK_f,           togglefullscr,            {0} },
 
 
 
