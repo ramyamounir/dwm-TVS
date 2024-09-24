@@ -1,9 +1,15 @@
 /* See LICENSE file for copyright and license details. */
 
+/* helper for spawning shell commands in the pre dwm-5.0 fashion */
+#define TERMINAL "st"
+#define TERMCLASS "St"
+#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
+
 /* appearance */
 static const unsigned int borderpx    = 1.5;      /* border pixel of windows */
 static const unsigned int gappx       = 20;       /* gaps between windows */
 static const unsigned int snap        = 0;        /* snap pixel */
+static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const unsigned int minwsz      = 25;       /* Minimal heigt of a client for smfact */
 static const int showbar              = 1;        /* 0 means no bar */
 static const int topbar               = 1;        /* 0 means bottom bar */
@@ -19,6 +25,8 @@ static const char *fonts[]            = {
     "Symbols Nerd Font Mono:size=12"
 };
 static const char dmenufont[]         = "SF Mono:size=10:style=SemiBold";
+
+
 
 
 /*
@@ -121,14 +129,18 @@ static const unsigned int alphas[][3]      = {
 /* tagging */
 static const char *tags[] = { "󰲠", "󰲢", "󰲤", "󰲦", "󰲨", "󰲪", "󰲬", "󰲮", "󰲰", "󰿬" };
 
+
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
-	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	*/
+	/* class    instance      title       	 tags mask    isfloating   isterminal  noswallow  monitor */
+	{ "Gimp",     NULL,       NULL,       	    1 << 8,       0,           0,         0,        -1 },
+	{ TERMCLASS,  NULL,       NULL,       	    0,            0,           1,         0,        -1 },
+	{ NULL,       NULL,       "Event Tester",   0,            0,           0,         1,        -1 },
+	{ NULL,      "spterm",    NULL,       	    SPTAG(0),     1,           1,         0,        -1 },
+	{ NULL,      "spcalc",    NULL,       	    SPTAG(1),     1,           1,         0,        -1 }
 };
 
 /* layout(s) */
@@ -167,9 +179,6 @@ static const int default_layout = 5;
 	/*{ MOD, XK_z,     ACTION##stack, {.i = 2 } }, \*/
 	/*{ MOD, XK_x,     ACTION##stack, {.i = -1 } },*/
 
-/* helper for spawning shell commands in the pre dwm-5.0 fashion */
-#define TERMINAL "st"
-#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
