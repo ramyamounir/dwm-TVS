@@ -4,8 +4,7 @@ VERSION = 6.5
 # Customize below to fit your system
 
 # paths
-# PREFIX = ~/.local
-PREFIX = ~/history/bins/dwm
+PREFIX = ~/.local
 MANPREFIX = ${PREFIX}/share/man
 
 X11INC = /usr/X11R6/include
